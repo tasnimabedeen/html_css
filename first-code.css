@@ -4,17 +4,121 @@ body{
     background-repeat:repeat;
 }
 
+.slider-holder
+{
+    width: 100%;
+    height: 50vh;
+    background-color: yellow;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    text-align: center;
+    overflow: hidden;
+    animation-name: imgani;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+}
+
+@keyframes imgani {
+    0%{
+        position: absolute;
+        top: -50vh;  
+    }
+    100%{
+        position: absolute;
+        top:0vh;
+    }   
+}
+
+.image-holder
+{
+    width: 300%;
+    background-color: red;
+    height: auto;
+    clear: both;
+    position: relative;
+   
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+    transition: left 2s;
+}
+
+.slider-image{
+    width: 33.333334%;
+}
+
+.slider-image
+{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    height: 50vh;
+}
+
+#slider-image-1:target ~ .image-holder
+{
+    left: 0px;
+}
+
+#slider-image-2:target ~ .image-holder
+{
+    left: -100%;
+}
+
+#slider-image-3:target ~ .image-holder
+{
+    left: -200%;
+}
+
+.button-holder
+{
+    position: relative;
+    top: -20px;
+}
+
+.slider-change
+{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background-color: brown;
+}
+
 nav{
     background-color: hsla(0, 2%, 63%, 0.6);
+    height: 10vh;
     position: sticky;
     top:0px;
-    height: 10vh;
     border: 1vh solid rgba(20, 43, 78, 0);
     border-radius: 5px;
     margin: 3vh 0vh;
     box-shadow: 0vh 0vh 4vh 0vh;
     backdrop-filter: blur(2px);
     z-index: 999;
+    animation-name: navani;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+    animation-delay: 600ms; 
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes navani {
+    0% {
+        background-color: hsla(0, 2%, 63%, 0);
+        border: 0vh solid rgba(20, 43, 78, 0);
+        margin: 0vh 0vh;
+        box-shadow: 0vh 0vh 0vh 0vh;
+        backdrop-filter: blur(0px);
+        left: 0%;
+        }
+        100% {    
+            position: sticky;
+            top:0px;
+            opacity: 1;
+        }
 }
 
 .logo{
@@ -22,9 +126,17 @@ nav{
     top: 50%;
     transform: translate(0px,-5.0vh);
     height: 10vh;
-    width: auto;
+    width: 10vh;
     padding-left: 1vh;
-  
+    animation: logani;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+    animation-delay: 600ms;
+}
+
+@keyframes logani{
+    0%{height: 10px;width: 10px; padding-left: 1vh;display: none;}
+    100%{}
 }
 
 .url{
@@ -59,19 +171,55 @@ nav{
     padding: 15px;
     padding-bottom: 0px;
     margin: 3vh 10vh 3vh 10vh;
+    opacity: 0;
+    animation-name: saani;
+    animation-delay: 1200ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-duration: 500ms;
 }
+
+@keyframes saani{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
 .d{
     padding: 5px;
+    opacity: 0;
+    animation-name:tani ;
+    animation-duration: 500ms;
+    animation-delay: 1800ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
+
+@keyframes tani {
+    0%{ 
+        opacity: 0;}
+    100%{
+        opacity: 1;}
+    }
 
 .da{
     text-transform: uppercase;
     font-size: 3vh;
+    position: relative;
 }
 .daa{
     text-align: justify;
     padding: 5px;
     padding-right: 10px;
+    position: relative;
+}
+
+.po{
+    opacity: 0;
+    animation-name:tani ;
+    animation-duration: 500ms;
+    animation-delay: 1800ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .ld{
@@ -101,6 +249,89 @@ nav{
         
     }
     
+    .slider-holder
+    {
+        width: 100%;
+        height: 30vh;
+        background-color: yellow;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        text-align: center;
+        overflow: hidden;
+        animation-name: imgani;
+        animation-duration: 500ms;
+        animation-timing-function: ease-in;
+    }
+    
+    @keyframes imgani {
+        0%{
+            position: absolute;
+            top: -30vh;  
+        }
+        100%{
+            position: absolute;
+            top:0vh;
+        }   
+    }
+    
+    .image-holder
+    {
+        width: 300%;
+        background-color: red;
+        height: auto;
+        clear: both;
+        position: relative;
+       
+        -webkit-transition: left 2s;
+        -moz-transition: left 2s;
+        -o-transition: left 2s;
+        transition: left 2s;
+    }
+    
+    .slider-image{
+        width: 33.333334%;
+    }
+    
+    .slider-image
+    {
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+        height: 30vh;
+    }
+    
+    #slider-image-1:target ~ .image-holder
+    {
+        left: 0px;
+    }
+    
+    #slider-image-2:target ~ .image-holder
+    {
+        left: -100%;
+    }
+    
+    #slider-image-3:target ~ .image-holder
+    {
+        left: -200%;
+    }
+    
+    .button-holder
+    {
+        position: relative;
+        top: -20px;
+    }
+    
+    .slider-change
+    {
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        border-radius: 5px;
+        background-color: brown;
+    }
+    
     nav{
        
         height: 5vh;
@@ -115,6 +346,7 @@ nav{
         top: 50%;
         transform: translate(0px,-2.5vh);
         height: 5vh;
+        width:5vh;
         padding-left: .5vh;
       
     }
