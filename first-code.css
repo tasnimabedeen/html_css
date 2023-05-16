@@ -37,11 +37,44 @@ body{
     height: auto;
     clear: both;
     position: relative;
-   
+    animation-name: auto;
+    animation-duration: 20s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
     -webkit-transition: left 2s;
     -moz-transition: left 2s;
     -o-transition: left 2s;
     transition: left 2s;
+}
+
+@keyframes auto {
+    0%{
+        left: 0%;
+    }
+    8%{
+        left: 0%;
+    }
+    20%{
+        left: -100%;
+    }
+    33%{
+        left: -100%;
+    }
+    46%{
+        left: -200%;
+    }
+    60%{
+        left: -200%;
+    }
+    73%{
+        left:-100%;
+    }
+    86%{
+        left: -100%;
+    }
+    100%{
+        left:0%;
+    }
 }
 
 .slider-image{
@@ -57,7 +90,7 @@ body{
     height: 50vh;
 }
 
-#slider-image-1:target ~ .image-holder
+/* #slider-image-1:target ~ .image-holder
 {
     left: 0px;
 }
@@ -70,7 +103,9 @@ body{
 #slider-image-3:target ~ .image-holder
 {
     left: -200%;
-}
+} */
+
+
 
 .button-holder
 {

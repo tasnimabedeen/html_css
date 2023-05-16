@@ -1,0 +1,64 @@
+.sa2{
+    position: relative;
+    top: 10vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0vh 0vh 2.2vh 0vh;
+    backdrop-filter: blur(2px);
+    padding: 15px;
+    padding-bottom: 0px;
+    margin: 3vh 10vh 3vh 10vh;
+    opacity: 0;
+    animation-name: saani;
+    animation-delay: 1200ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-duration: 500ms;
+}
+
+@keyframes saani{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.da2{
+    text-transform: uppercase;
+    font-size: 3vh;
+    position: relative;
+}
+.daa2{
+    text-align: justify;
+    padding: 5px;
+    padding-right: 10px;
+    position: relative;
+}
+
+.ld2{
+    display: flex;
+    position: relative;
+    top: 100px;
+    padding: 10px;
+    background-color: hsla(0, 2%, 63%, 0.6);
+    box-shadow: 0vh 0vh 4vh 0vh;
+    backdrop-filter: blur(2px);
+    
+}
+
+.la{
+    width: 33%;
+}
+.la ul{
+    list-style: none;
+    position: relative;
+    left: -30px;
+    
+}
+
+
+@media  screen and (max-width: 720px) {
+.ld2{
+    display: grid;
+    
+}
+}
